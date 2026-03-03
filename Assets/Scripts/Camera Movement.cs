@@ -7,13 +7,14 @@ public class CameraMovement : MonoBehaviour
     public GameObject Player;
     public int MoveThreshold = 3;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void StartCamMovement(GameObject player)
     {
+        Player = player;
         MainCamera = Camera.main; 
     }
 
     // Update is called once per frame
-    void Update()
+    public void UpdateCamMovement()
     {
         if (isFollowing)
         {
